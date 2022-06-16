@@ -1,16 +1,18 @@
 {
     "manifest_version": 3,
     "name": "GitHub Copy Raw",
-    "version": "0.0.0",
-    "description": "",
-    "content_scripts": [
-        {
-            "matches": [
-                "https://github.com/*/blob/*"
-            ],
-            "js": [
-                "js/main.js"
-            ]
-        }
+    "version": "1.0.0",
+    "description": "This is Google Extensions for publishing GitHub raw links.",
+    "background": {
+        "service_worker": "js/main.js"
+    },
+    "host_permissions": [
+        "https://github.com/*/blob/*"
+    ],
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "clipboardWrite",
+        "scripting"
     ]
 }
