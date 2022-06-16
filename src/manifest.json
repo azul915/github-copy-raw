@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub Copy Raw",
+    "version": "0.0.0",
+    "description": "",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/*/blob/*"
+            ],
+            "js": [
+                "js/main.js"
+            ]
+        }
+    ]
+}
